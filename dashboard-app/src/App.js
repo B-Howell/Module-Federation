@@ -1,8 +1,8 @@
-import React, { lazy, Suspense } from 'react';
-import { AppBar, Toolbar, Typography } from '@mui/material';
+import React from 'react';
+import { AppBar, Toolbar, Typography, Box } from '@mui/material';
 import './App.css';
-
-const Login = lazy(() => import('LoginApp/Login'));
+import MainContent from './MainContent';
+import Sidebar from './Sidebar';
 
 function App() {
   return (
@@ -12,14 +12,16 @@ function App() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Dashboard
           </Typography>
+          {/* Other items in Toolbar */}
         </Toolbar>
       </AppBar>
-      <Suspense fallback={<div>Loading Sign in / Sign up...</div>}>
-        <Login />
-      </Suspense>
-      <div className="container">
-        {/* Your other content here */}
-      </div>
+      <Box display="flex" flexDirection="row">
+        <Sidebar /> {/* Positioned below AppBar, beside MainContent */}
+        <Box flexGrow={1}>
+          {/* Main Content */}
+          <MainContent />
+        </Box>
+      </Box>
     </div>
   );
 }
