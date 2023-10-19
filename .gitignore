@@ -1,0 +1,5 @@
+dashboard-app/node_modules
+dashboard-app/yarn.lock
+
+login-app/node_modules
+login-app/yarn.lock
