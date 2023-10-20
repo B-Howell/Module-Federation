@@ -4,7 +4,7 @@ import './App.css';
 
 const Login = lazy(() => import('LoginApp/Login'));
 
-function MainContent() { // Changed the function name to MainContent
+function MainContent({ selectedMicrofrontend }) {  // Added selectedMicrofrontend as a prop
   return (
     <div className="MainContent">
       <AppBar position="static" sx={{ backgroundColor: '#404040' }}>
@@ -15,7 +15,7 @@ function MainContent() { // Changed the function name to MainContent
         </Toolbar>
       </AppBar>
       <Suspense fallback={<div>Loading Sign in / Sign up...</div>}>
-        <Login />
+        {selectedMicrofrontend === 'Login' ? <Login /> : <div>Please sign in to proceed.</div>}
       </Suspense>
       <div className="container">
         {/* Your other content here */}

@@ -1,22 +1,40 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography } from '@mui/material';
-import './App.css';
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { AppBar, Toolbar, Typography, Button } from '@mui/material';
+import { Link } from 'react-router-dom';
+import SignIn from './SignIn';
+import SignUp from './SignUp';
 
 function App() {
   return (
-    <div className="App">
-      <AppBar position="static" sx={{backgroundColor: '#d9d9d9', color: '#000000'}}>
-        <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Sign In / Sign Up
-          </Typography>
-        </Toolbar>
-      </AppBar>
-      <div className="container">
-        {/* Your other content here */}
+    <BrowserRouter>
+      <div>
+        <AppBar position="static">
+          <Toolbar>
+            <Typography variant="h6" style={{ flexGrow: 1 }}>
+              Login Service
+            </Typography>
+            <Button color="inherit" component={Link} to="/signin">
+              Sign In
+            </Button>
+            <Button color="inherit" component={Link} to="/signup">
+              Sign Up
+            </Button>
+          </Toolbar>
+        </AppBar>
+        
+        <Routes>
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+        </Routes>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
+
+export const mount = (el) => {
+  ReactDOM.render(<App />, el);
+};
 
 export default App;

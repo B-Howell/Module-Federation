@@ -1,5 +1,8 @@
-dashboard-app/node_modules
+dashboard-app/node_modules/
 dashboard-app/yarn.lock
 
-login-app/node_modules
+login-app/node_modules/
 login-app/yarn.lock
+
+login-server/node_modules/
+login-server/yarn.lock
