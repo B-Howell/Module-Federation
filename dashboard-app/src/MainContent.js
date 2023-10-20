@@ -15,7 +15,8 @@ function MainContent({ selectedMicrofrontend }) {  // Added selectedMicrofronten
         </Toolbar>
       </AppBar>
       <Suspense fallback={<div>Loading Sign in / Sign up...</div>}>
-        {selectedMicrofrontend === 'Login' ? <Login /> : <div>Please sign in to proceed.</div>}
+        {selectedMicrofrontend === 'Login' ? <Login /> : 
+        <div>Please sign in to proceed.</div>}
       </Suspense>
       <div className="container">
         {/* Your other content here */}
