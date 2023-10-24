@@ -3,8 +3,9 @@ import { AppBar, Toolbar, Typography } from '@mui/material';
 import './App.css';
 
 const Login = lazy(() => import('LoginApp/Login'));
+const Counter = lazy(() => import('CounterApp/Counter'));  // Corrected the import
 
-function MainContent({ selectedMicrofrontend }) {  // Added selectedMicrofrontend as a prop
+function MainContent({ selectedMicrofrontend }) {
   return (
     <div className="MainContent">
       <AppBar position="static" sx={{ backgroundColor: '#404040' }}>
@@ -14,8 +15,9 @@ function MainContent({ selectedMicrofrontend }) {  // Added selectedMicrofronten
           </Typography>
         </Toolbar>
       </AppBar>
-      <Suspense fallback={<div>Loading Sign in / Sign up...</div>}>
+      <Suspense fallback={<div>Loading...</div>}>
         {selectedMicrofrontend === 'Login' ? <Login /> : 
+        selectedMicrofrontend === 'Counter' ? <Counter /> :  // Added this line
         <div>Please sign in to proceed.</div>}
       </Suspense>
       <div className="container">

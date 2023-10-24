@@ -45,7 +45,8 @@ module.exports = {
             // This URL provides three important pieces of information: the module's name is "Login", it is hosted on "localhost:3001", 
             // and its module definition is "remoteEntry.js".
             remotes: { 
-                "LoginApp": "LoginApp@http://localhost:3001/remoteEntry.js",            
+                "LoginApp": "LoginApp@http://localhost:3001/remoteEntry.js",   
+                "CounterApp": "CounterApp@http://localhost:3003/remoteEntry.js",         
             },
             shared: {  // and shared
                 ...dependencies,  // other dependencies

@@ -6,3 +6,6 @@ login-app/yarn.lock
 
 login-server/node_modules/
 login-server/yarn.lock
+
+counter-app/node_modules/
+counter-app/yarn.lock
