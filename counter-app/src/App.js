@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Typography, Container } from '@mui/material';
+import { AppBar, Toolbar, Button, Typography, Container } from '@mui/material';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -13,7 +13,15 @@ function App() {
   };
 
   return (
-    <Container>
+    <div className="Counter">
+      <AppBar position="static" sx={{ backgroundColor: '#b3b3b3' }}>
+        <Toolbar>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            Counter
+          </Typography>
+        </Toolbar>
+      </AppBar>
+
       <Typography variant="h1">{count}</Typography>
       <Button variant="contained" color="primary" onClick={incrementCounter}>
         Increment
@@ -21,7 +29,7 @@ function App() {
       <Button variant="contained" color="secondary" onClick={resetCounter}>
         Reset
       </Button>
-    </Container>
+    </div>
   );
 }
 
