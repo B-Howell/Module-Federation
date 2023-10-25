@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className="Counter">
-      <AppBar position="static" sx={{ backgroundColor: '#b3b3b3' }}>
+      <AppBar position="static" sx={{ backgroundColor: '#950750' }}>
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Counter

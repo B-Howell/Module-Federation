@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className="App">
-      <AppBar position="static" sx={{ backgroundColor: '#000000' }}>
+      <AppBar position="static" sx={{ backgroundColor: '#1A1A1D' }}>
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Dashboard

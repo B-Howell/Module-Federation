@@ -24,7 +24,7 @@ function Sidebar({ setSelectedMicrofrontend }) {
   };
 
   return (
-    <div style={{ backgroundColor: '#b30000', width: drawerOpen ? '200px' : '50px', height: '100vh', color: 'white' }}>
+    <div style={{ backgroundColor: '#4E4E50', width: drawerOpen ? '200px' : '50px', height: '100vh', color: 'white' }}>
       
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: drawerOpen ? 'flex-start' : 'center', paddingLeft: drawerOpen ? '16px' : '0' }}>
         <IconButton edge="start" style={{ color: 'white' }} onClick={toggleDrawer(!drawerOpen)}>
@@ -42,7 +42,7 @@ function Sidebar({ setSelectedMicrofrontend }) {
         <PlusOneIcon />
         {drawerOpen && <Typography variant="subtitle1" style={{ color: 'white', marginLeft: '8px' }}>Counter</Typography>}
       </Button>
-      
+
     </div>
   );
 }

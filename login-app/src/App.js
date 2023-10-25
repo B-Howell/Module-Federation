@@ -10,7 +10,7 @@ function App() {
   return (
     <BrowserRouter>
       <div>
-        <AppBar position="static">
+        <AppBar position="static" sx={{ backgroundColor: '#950740' }}>
           <Toolbar>
             <Typography variant="h6" style={{ flexGrow: 1 }}>
               Login Service
